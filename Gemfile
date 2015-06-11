@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faker'
 gem 'pry'
 gem 'react-rails'
+gem 'responders', '~> 2.0'
 
 group :development, :test do
   gem 'byebug'
