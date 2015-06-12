@@ -2,7 +2,7 @@
 ####CRUD app with ReactJS
 
 This app is an experiment to create a Rails-backed ReactJS app with **RESTful** routes. 
-To get started, clone the Repo, then `bundle install`, `rake db:migrate`, `rake db:seed`.
+To get started, clone the Repo, then `bundle install`, `rake db:migrate`, `rake db:seed`, and `rails generate react:install`.
 
 **** 
 
