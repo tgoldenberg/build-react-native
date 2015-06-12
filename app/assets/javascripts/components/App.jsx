@@ -5,8 +5,17 @@ var App = React.createClass({
   setPage: function() {
     this.setState({page: "posts_index"});
   },
+  deletePost: function(posts) {
+    this.setState({posts: posts, page: "posts_index"});
+    return false;
+  },
+  createPost: function() {
+    this.setState({page: "posts_create"});
+    console.log(this.state.page);
+    return false;
+  },
   handlePostClick: function(author, title, body, index, id) {
-    this.setState({id: index, page: "posts_show"});
+    this.setState({id: index, page: "posts_show", index: id});
     return false;
   },
   render: function() {
@@ -23,9 +32,11 @@ var App = React.createClass({
     var page = "";
 
     if (this.state.page == "posts_index" ) {
-      page = <PostsIndex posts={posts} />;
+      page = <PostsIndex posts={posts} onCreate={this.createPost} />;
     } else if (this.state.page == "posts_show") {
-      page = <PostsShow id={this.state.id} posts={posts} onBackClick={this.setPage}/>;
+      page = <PostsShow id={this.state.id} index={this.state.index} posts={posts} onBackClick={this.setPage} onDelete={this.deletePost} />;
+    } else if (this.state.page == "posts_create") {
+      page = <PostsNew />;
     }
     return (
       page
