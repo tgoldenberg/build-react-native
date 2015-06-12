@@ -4,13 +4,20 @@ var PostsNew = React.createClass({
     var form = e.target;
     var title = $('#post_title').val();
     var body = $('#post_body').val();
-    console.log(title, body);
+    var func = this.props.handleCreate;
     $.ajax({
       method: form.method,
       url: form.action,
       data: {post: {title: title, body: body}},
       dataType: 'json',
-    })
+      success: function(data) {
+        console.log(data);
+        func(data);
+      },
+      error: function(data) {
+        $('.error-messages').html("Invalid submission");
+      }
+    });
   },
   render: function() {
     return (
@@ -18,6 +25,7 @@ var PostsNew = React.createClass({
         <div className="well">
           <h1>New Post</h1>
         </div>
+        <p className="error-messages"></p>
         <form action="/posts" method="post" id="posts_form" className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
             <input type="text" name="post[title]" placeholder="title" id="post_title" className="form-control" />
@@ -29,10 +37,7 @@ var PostsNew = React.createClass({
             <input type="submit" name="commit" className="btn btn-success btn-lg" /><br />
             <a href=""><button className="btn btn-default">Back</button></a>
           </div>
-
         </form>
-
-
       </div>
     );
   }

@@ -16,6 +16,7 @@ var PostsShow = React.createClass({
       data: {method: "delete"},
       dataType: "json",
       success: function(data) {
+        console.log(data);
         func(data);
       }
     })

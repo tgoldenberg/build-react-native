@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    posts = Post.all.to_json
+    posts = Post.all.order("created_at DESC").to_json
     render json: posts
   end
 
@@ -27,15 +27,11 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+    if @post.save
+      @posts = Post.all.order("created_at DESC").to_json
+      render json: @posts
+    else
+      render json: @post.errors, status: :unprocessable_entity
     end
   end
 
@@ -58,7 +54,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC").to_json
     render json: @posts
   end
 
