@@ -26,12 +26,16 @@ var App = React.createClass({
       dataType: "json",
       success: function(data) {
         if (this.isMounted()) {
-          this.setState({post: data});
+          this.setState({post: data, page: "posts_edit", id: id});
         }
       }.bind(this)
     });
-    this.setState({page: "posts_edit", id: id});
+    // this.setState({page: "posts_edit", id: id});
     return false;
+  },
+
+  updatePost: function(data) {
+    this.setState({posts: data, page: "posts_index"})
   },
 
   handlePostClick: function(author, title, body, index, id) {
@@ -58,7 +62,7 @@ var App = React.createClass({
     } else if (this.state.page == "posts_create") {
       page = <PostsNew handleCreate={this.createNewPost} />;
     } else if (this.state.page == "posts_edit") {
-      page = <PostsEdit id={this.state.id} post={this.state.post} />;
+      page = <PostsEdit id={this.state.id} post={this.state.post} onEditSubmit={this.updatePost} />;
     }
     return (
       page

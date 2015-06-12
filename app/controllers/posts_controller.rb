@@ -40,15 +40,10 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
-    respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @post }
-      else
-        format.html { render :edit }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
+    @post = Post.find(params[:id])
+    @post.update_attributes post_params
+    @posts = Post.all.order("created_at DESC").to_json
+    render json: @posts
   end
 
   # DELETE /posts/1
