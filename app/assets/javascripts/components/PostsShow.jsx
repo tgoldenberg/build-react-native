@@ -5,6 +5,7 @@ var PostsShow = React.createClass({
   },
   handleEdit: function(e) {
     e.preventDefault();
+    this.props.onEdit(this.props.index);
   },
   handleDelete: function(e) {
     e.preventDefault();
