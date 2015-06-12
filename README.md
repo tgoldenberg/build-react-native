@@ -8,7 +8,6 @@ To get started, clone the Repo, then `bundle install`, `rake db:migrate`, `rake 
 
 The only resource is `posts`. For each of the 7 essentials routes (`new`, `create`, `edit`, `update`, `show`, `index`, `destroy`), there is a corresponding **React** component. 
 
-**** 
 
 The app functions as a single-page application (**SPA**), meaning that there are no refreshes of the browser. Please feel free to fork the repo and make pull requests for changes / improvements.
 
