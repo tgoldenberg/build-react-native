@@ -5,6 +5,10 @@ This app is an experiment to create a Rails-backed ReactJS app with **REST**ful 
 
 The only resource is `posts`. For each of the 7 essentials routes (`new`, `create`, `edit`, `update`, `show`, `index`, `destroy`), there is a corresponding **React** component. 
 
+**** 
+
+The app functions as a single-page application (**SPA**), meaning that there are no refreshes of the browser. Please feel free to fork the repo and make pull requests for changes / improvements.
+
 `PostsIndex` react component
 
 ![screenshot](https://raw.githubusercontent.com/tgoldenberg/react-CRUD/master/crud1.png)
