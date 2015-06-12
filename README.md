@@ -3,6 +3,8 @@
 
 This app is an experiment to create a Rails-backed ReactJS app with **RESTful** routes. 
 
+To get started, clone the Repo, then `bundle install`, `rake db:migrate`, `rake db:seed`.
+
 The only resource is `posts`. For each of the 7 essentials routes (`new`, `create`, `edit`, `update`, `show`, `index`, `destroy`), there is a corresponding **React** component. 
 
 **** 
