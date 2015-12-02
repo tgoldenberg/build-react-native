@@ -139,6 +139,9 @@ h1.title {
     background-color: #1B72D0;
 }
 
+article {
+    padding: 30px 0 30px 0;
+}
 
 /* ==========================================================================
    Global Typography
