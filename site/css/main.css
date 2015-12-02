@@ -64,30 +64,6 @@ body {
 }
 
 
-/* ===================
-    ALL: Orange Theme
-   =================== */
-
-.header-container {
-    border-bottom: 20px solid #e44d26;
-}
-
-.footer-container,
-.main aside {
-    border-top: 20px solid #e44d26;
-}
-
-.header-container,
-.footer-container,
-.main aside {
-    background: #f16529;
-}
-
-.title {
-    color: white;
-}
-
-
 /* ==============
     MOBILE: Menu
    ============== */
@@ -123,14 +99,6 @@ nav a:hover {
     MOBILE: Main
    ============== */
 
-.main {
-    padding: 30px 0;
-}
-
-.main article h1 {
-    font-size: 2em;
-}
-
 .main aside {
     color: white;
     padding: 0px 5% 10px;
@@ -151,12 +119,37 @@ nav a:hover {
 }
 
 
+/* ===============
+    Article Layout
+   =============== */
+
+.header {
+    position: relative;
+    height: 400px;
+    background-color: #1B72D0;
+}
+
+
 /* ==========================================================================
    Typography
    ========================================================================== */
 
-h1,h2,h3,h4,h5,h6 {
-    font-weight: 200
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+.main-container h1 {
+    color: #ffffff;
+    margin: 0 0 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .main article h1 {
@@ -172,7 +165,12 @@ section h3 {
 }
 
 section h4 {
-    font-size: 24px;
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 32px;
 }
 
 
