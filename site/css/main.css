@@ -118,6 +118,15 @@ nav a:hover {
     padding-top: 20px;
 }
 
+/* ===============
+    Nav
+   =============== */
+
+h1.title {
+    text-align: center;
+    font-size: 18px;
+}
+
 
 /* ===============
     Article Layout
