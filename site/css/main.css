@@ -118,6 +118,7 @@ nav a:hover {
     padding-top: 20px;
 }
 
+
 /* ===============
     Nav
    =============== */
@@ -140,7 +141,7 @@ h1.title {
 
 
 /* ==========================================================================
-   Typography
+   Global Typography
    ========================================================================== */
 
 h1,
@@ -180,6 +181,21 @@ section h4 {
 p {
     font-size: 18px;
     line-height: 32px;
+}
+
+
+/* ===============
+    Code
+   =============== */
+
+.code-container {
+    background-color: #383838;
+    padding: 35px 20px 35px 20px;
+    color: #ffffff;
+}
+
+code {
+    font-family: Courier;
 }
 
 
