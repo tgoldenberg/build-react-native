@@ -143,6 +143,7 @@ article {
     padding: 30px 0 30px 0;
 }
 
+
 /* ==========================================================================
    Global Typography
    ========================================================================== */
@@ -195,24 +196,36 @@ p {
    =============== */
 
 .code-container {
-    background-color: #383838;
-    padding: 35px 20px 35px 20px;
     color: #ffffff;
 }
 
+.code-container.terminal {
+    background-color: #383838;
+}
+
+.code-container pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 35px 20px 35px 20px;
+}
+
+
+}
 code {
     font-family: Courier;
 }
 
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
 @media only screen and (min-width: 480px) {
     /* ====================
     INTERMEDIATE: Menu
    ==================== */
+    
     nav a {
         float: left;
         width: 27%;
@@ -220,27 +233,31 @@ code {
         padding: 25px 2%;
         margin-bottom: 0;
     }
+    
     nav li:first-child a {
         margin-left: 0;
     }
+    
     nav li:last-child a {
         margin-right: 0;
     }
     /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
+    
     nav ul li {
         display: inline;
     }
+    
     .oldie nav a {
         margin: 0 0.7%;
     }
 }
-
 @media only screen and (min-width: 768px) {
     /* ====================
     WIDE: CSS3 Effects
    ==================== */
+    
     .header-container,
     .main aside {
         -webkit-box-shadow: 0 5px 10px #aaa;
@@ -250,7 +267,7 @@ code {
     /* ============
     WIDE: Menu
    ============ */
-   /*
+    /*
     .title {
         float: left;
     }
@@ -262,22 +279,25 @@ code {
     /* ============
     WIDE: Main
    ============ */
+    
     .main article {
         margin-left: auto;
         margin-right: auto;
         width: 67%;
     }
+    
     .main aside {
         float: right;
         width: 28%;
     }
+    
     */
 }
-
 @media only screen and (min-width: 1140px) {
     /* ===============
     Maximal Width
    =============== */
+    
     .wrapper {
         width: 1026px;
         /* 1140px - 10% for margins */
@@ -285,16 +305,13 @@ code {
     }
 }
 
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 .hidden {
     display: none !important;
     visibility: hidden;
 }
-
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -305,7 +322,6 @@ code {
     position: absolute;
     width: 1px;
 }
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -315,30 +331,24 @@ code {
     position: static;
     width: auto;
 }
-
 .invisible {
     visibility: hidden;
 }
-
 .clearfix:before,
 .clearfix:after {
     content: " ";
     display: table;
 }
-
 .clearfix:after {
     clear: both;
 }
-
 .clearfix {
     *zoom: 1;
 }
 
-
 /* ==========================================================================
    Print styles
    ========================================================================== */
-
 @media print {
     *,
     *:before,
@@ -348,41 +358,51 @@ code {
         box-shadow: none !important;
         text-shadow: none !important;
     }
+    
     a,
     a:visited {
         text-decoration: underline;
     }
+    
     a[href]:after {
         content: " (" attr(href) ")";
     }
+    
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
+    
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
+    
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
+    
     thead {
         display: table-header-group;
     }
+    
     tr,
     img {
         page-break-inside: avoid;
     }
+    
     img {
         max-width: 100% !important;
     }
+    
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
+    
     h2,
     h3 {
         page-break-after: avoid;
