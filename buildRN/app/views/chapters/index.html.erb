@@ -1,0 +1,8 @@
+<h1>Chapters#index</h1>
+<ul>
+  <%= @chapters.each do |chapter| %>
+    <li>
+      <%= link_to chapter.title, chapter_path(chapter) %></a>
+    </li>
+  <% end %>
+</ul>
