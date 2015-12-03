@@ -1,8 +1,8 @@
 <h1>Chapters#index</h1>
-<ul>
-  <%= @chapters.each do |chapter| %>
-    <li>
-      <%= link_to chapter.title, chapter_path(chapter) %></a>
-    </li>
+<%= react_component('Chapters', chapters: @chapters) %>
+<!-- <ul>
+  <% @chapters.each do |chapter| %>
+    <li> <%= link_to chapter.title, chapter_path(chapter) %></li>
   <% end %>
-</ul>
+  <%= link_to 'Chapter test', chapters_test_path %>
+</ul> -->
