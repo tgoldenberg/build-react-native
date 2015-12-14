@@ -1,10 +1,11 @@
 
 var Homepage = React.createClass({
   getInitialState(){
-    return {email: ''};
+    return {email: '', errorMessage: ''};
   },
 	handleSubmit() {
-    console.log('SUBMIT', this.state.email);
+    var email = this.state.email;
+    React.findDOMNode(this.refs.email).value = "";
     $.ajax({
 			url: '/customers',
 			method: 'post',
