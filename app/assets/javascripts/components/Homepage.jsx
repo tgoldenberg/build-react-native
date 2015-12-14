@@ -12,8 +12,8 @@ var Homepage = React.createClass({
 			dataType: 'json',
       data: {customer: {email: this.state.email}}
 		})
-		.done((res) => {console.log('RES', res)})
-		.fail((err) => {console.log('ERR', err)})
+		.done((res) => {console.log('CUSTOMERS', res)})
+		.fail((err) => {console.log('ERR', "email " + JSON.parse(err.responseText).email[0])})
 	},
   render() {
     return (
