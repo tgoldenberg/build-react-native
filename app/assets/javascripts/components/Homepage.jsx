@@ -5,14 +5,14 @@ var Homepage = React.createClass({
   },
 	handleSubmit() {
     console.log('SUBMIT', this.state.email);
-    // this.setState({ ajaxSending: true });
-    // $.ajax({
-		// 	url: `/customers/${1}`,
-		// 	method: 'get',
-		// 	dataType: 'json',
-		// })
-		// .done((res) => {console.log('RES', res)})
-		// .fail((err) => {console.log('ERR', err)})
+    $.ajax({
+			url: '/customers',
+			method: 'post',
+			dataType: 'json',
+      data: {customer: {email: this.state.email}}
+		})
+		.done((res) => {console.log('RES', res)})
+		.fail((err) => {console.log('ERR', err)})
 	},
   render() {
     return (
