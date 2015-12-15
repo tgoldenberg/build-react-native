@@ -3,7 +3,9 @@ var Homepage = React.createClass({
   getInitialState(){
     return {email: '', errorMessage: ''};
   },
-	handleSubmit() {
+	handleSubmit(e) {
+    e.preventDefault();
+    this.props.openModal();
     var email = this.state.email;
     React.findDOMNode(this.refs.email).value = "";
     $.ajax({
