@@ -29,6 +29,14 @@ class CustomersController < ApplicationController
   # POST /customers.json
   def create
     @customer = Customer.new(customer_params)
+    mailchimp = Mailchimp::API.new('73d952ea9d9a8239cb811ae3a806f896-us10')
+    mailchimp.lists.subscribe('58af36d5cf',
+                   { "email" => customer_params[:email],
+                     "euid" => "123",
+                     "leid" => "123123"
+                   }, double_optin: false)
+
+
     if @customer.save
       @customers = Customer.all.order("created_at DESC").to_json
       render json: @customers
