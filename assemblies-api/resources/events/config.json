@@ -1,0 +1,77 @@
+{
+	"type": "Collection",
+	"properties": {
+		"createdAt": {
+			"name": "createdAt",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "createdAt",
+			"order": 0
+		},
+		"start": {
+			"name": "start",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "start",
+			"order": 1
+		},
+		"end": {
+			"name": "end",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "end",
+			"order": 2
+		},
+		"location": {
+			"name": "location",
+			"type": "object",
+			"typeLabel": "object",
+			"required": true,
+			"id": "location",
+			"order": 3
+		},
+		"going": {
+			"name": "going",
+			"type": "array",
+			"typeLabel": "array",
+			"required": true,
+			"id": "going",
+			"order": 4
+		},
+		"capacity": {
+			"name": "capacity",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "capacity",
+			"order": 5
+		},
+		"groupId": {
+			"name": "groupId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "groupId",
+			"order": 6
+		},
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "name",
+			"order": 7
+		},
+		"description": {
+			"name": "description",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "description",
+			"order": 8
+		}
+	}
+}

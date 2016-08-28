@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"user1Id": {
+			"name": "user1Id",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "user1Id",
+			"order": 0
+		},
+		"user2Id": {
+			"name": "user2Id",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "user2Id",
+			"order": 1
+		},
+		"lastMessageText": {
+			"name": "lastMessageText",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "lastMessageText",
+			"order": 2
+		},
+		"lastMessageDate": {
+			"name": "lastMessageDate",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "lastMessageDate",
+			"order": 3
+		}
+	}
+}
